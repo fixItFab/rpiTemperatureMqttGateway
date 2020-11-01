@@ -1,0 +1,14 @@
+[Unit]
+Description= ghs temperature-gateway
+After=network.target
+
+[Service]
+ExecStart=node main.js
+WorkingDirectory=/home/pi/temperature-gateway
+StandardOutput=inherit
+StandardError=inherit
+Restart=always
+User=pi
+
+[Install]
+WantedBy=multi-user.target
